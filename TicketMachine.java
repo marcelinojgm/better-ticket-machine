@@ -109,7 +109,16 @@ public class TicketMachine
                     
         }
     }
-
+ 
+    /**
+     * vacia la maquina de las monedas almacenadas
+     */
+    public int emptyMachine()
+    {
+        int dineroSacado = total;
+        total = 0;
+        return dineroSacado;        
+    }
     /**
      * Return the money in the balance.
      * The balance is cleared.
