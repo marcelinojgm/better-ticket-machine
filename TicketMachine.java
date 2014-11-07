@@ -44,7 +44,18 @@ public class TicketMachine
     {
         return balance;
     }
-
+    
+    /**devuelve el dinero que hace falta meter
+     * para poder imprimir un ticket
+     */
+    public int getAmoungLeftToPay()
+    {
+         int amoungLeftToPay;
+         amoungLeftToPay = price - balance;
+         return amoungLeftToPay;    
+        
+    }
+    
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
@@ -58,6 +69,17 @@ public class TicketMachine
             System.out.println("Use a positive amount rather than: " +
                                amount);
         }
+        /**
+         *  if(amount <= 0) 
+         *  {
+            
+         *      System.out.println("Use a positive amount rather than: " +
+                               amount);
+         * }
+         *  else {
+         *      balance = balance + amount;
+         *      }
+         */
     }
 
     /**
