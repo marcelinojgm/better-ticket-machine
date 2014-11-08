@@ -22,10 +22,12 @@ public class TicketMachine
 
     /**
      * Create a machine that issues tickets of the given price.
+     * indica si la maquina puede (true) o no (false) dar ticket con reducicon de precio.
      */
-    public TicketMachine(int cost)
+    public TicketMachine(int cost, boolean reductionTicket)
     {
         price = cost;
+        reduction = reductionTicket;
         balance = 0;
         total = 0;
     }
