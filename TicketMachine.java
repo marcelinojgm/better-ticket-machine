@@ -17,6 +17,8 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    // Añade la posivilidad de crear tikect con descuento
+    private boolean reduction;
 
     /**
      * Create a machine that issues tickets of the given price.
