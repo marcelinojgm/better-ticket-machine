@@ -114,7 +114,36 @@ public class TicketMachine
                     
         }
     }
- 
+    /**
+     * Print a ticket reduction if enough money has been inserted, and
+     * reduce the current balance by the ticket price. Print
+     * an error message if more money is required.
+     */
+    public void printTicketReduction()
+    {   
+        //aplicacion de descuento despreciamos decimales
+        int priceReduction = price * 90/100;
+        if(balance >= priceReduction) {
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket Reduction");
+            System.out.println("# " + priceReduction + " cents.");
+            System.out.println("##################");
+            System.out.println();
+
+            // Update the total collected with the price.
+            total = total + priceReduction;
+            // Reduce the balance by the prince.
+            balance = balance - priceReduction;
+        }
+        else {
+            int amountLeftToPay = priceReduction - balance;
+            System.out.println("You must insert at least: " +
+                               amountLeftToPay + " more cents.");
+                    
+        }
+    }
     /**
      * vacia la maquina de las monedas almacenadas
      */
