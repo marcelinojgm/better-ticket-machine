@@ -119,7 +119,7 @@ public class TicketMachine
      * reduce the current balance by the ticket price. Print
      * an error message if more money is required.
      */
-    public void printTicketReduction()
+    public void printTicketWithDiscount()
     {  
         if(reduction)
         {
